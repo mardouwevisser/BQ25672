@@ -3,7 +3,7 @@
   AUTHOR:  Marc Visser
   VERSION: 0.0.1
   PURPOSE: BQ25672 library for the Arduino IDE
-  URL:     
+  URL:     https://github.com/mardouwevisser/BQ25672
   LICENCE: See LICENCE file
 */
 
