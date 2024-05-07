@@ -17,8 +17,9 @@ void setup() {
   delay(1000);
   Serial.println("BQ25672 Started");
 
-  charger.setWatchdogTimerTime(0);  // Writing 0 disables watchdog timer, default it is set to 5, meaning 40s
-  charger.setAdcEnabled(true);      // Enable ADC
+  charger.setWatchdogTimerTime(0);                // Writing 0 disables watchdog timer, default it is set to 5, meaning 40s
+  charger.setAdcEnabled(true);                    // Enable ADC
+  charger.setBatteryCurrentSensingEnabled(true);  // Enable battery current sensing during discharge
 
 }
 
