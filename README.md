@@ -5,9 +5,10 @@ Arduino library for the BQ25672 from Texas instruments.
 The BQ25672 is a 1-4S Li-ion battery charger IC including many adjustable options and reading functions. For full details check out the datasheet at: https://www.ti.com/product/BQ25672 
 
 ## Compatibility
-| Microcontroller   | Tested<br/>works | Does not<br/>work |
-|:------------------|:----------------:|:-----------------:|
-| ESP32             |        X         |                   |
+| Microcontroller | Tested<br/>works | Does not<br/>work |
+|:----------------|:----------------:|:-----------------:|
+| ESP32           |        X         |                   |
+| ESP32-S3        |        X         |                   |
 
 
 ### Things to beware of...
