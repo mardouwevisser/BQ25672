@@ -3,7 +3,12 @@
 import esphome.codegen as cg
 from esphome.components import number
 import esphome.config_validation as cv
-from esphome.const import CONF_MAX_VALUE, CONF_MIN_VALUE, ENTITY_CATEGORY_CONFIG
+from esphome.const import (
+    CONF_MAX_VALUE,
+    CONF_MIN_VALUE,
+    CONF_MODE,
+    ENTITY_CATEGORY_CONFIG,
+)
 
 from . import (
     BQ25672_COMPONENT_SCHEMA,
@@ -36,6 +41,10 @@ def setting_schema(key, setting):
             icon=setting.icon,
         ).extend(
             {
+                # Default to input boxes; YAML can still override with mode: slider.
+                cv.Optional(CONF_MODE, default="BOX"): cv.enum(
+                    number.NUMBER_MODES, upper=True
+                ),
                 cv.Optional(CONF_MIN_VALUE, default=setting.minimum): validator,
                 cv.Optional(CONF_MAX_VALUE, default=setting.maximum): validator,
             }
