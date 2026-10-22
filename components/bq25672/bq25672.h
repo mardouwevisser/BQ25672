@@ -70,6 +70,8 @@ enum class SwitchType : uint8_t {
   SWITCH_ICO_ENABLED,
   SWITCH_MPPT_ENABLED,
   SWITCH_OTG_ENABLED,
+  // ON forces both external input paths off; OFF releases that override.
+  SWITCH_INPUTS_DISCONNECTED,
   COUNT,
 };
 

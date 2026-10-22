@@ -88,6 +88,7 @@ SWITCH_KEYS = (
     "ico_enabled",
     "mppt_enabled",
     "otg_enabled",
+    "inputs_disconnected",
 )
 
 ADC_RESOLUTIONS = {15: 0, 14: 1, 13: 2, 12: 3}

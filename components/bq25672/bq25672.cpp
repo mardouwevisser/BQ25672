@@ -49,7 +49,11 @@ const SwitchSetting SWITCH_SETTINGS[] = {
     {"ICO", &BQ25672::getIcoEnabled, &BQ25672::setIcoEnabled},
     {"MPPT", &BQ25672::getMpptEnabled, &BQ25672::setMpptEnabled},
     {"OTG", &BQ25672::getOtgControlEnabled, &BQ25672::setOtgControlEnabled},
+    {"Inputs disconnected", &BQ25672::getInput1And2Disconnected,
+     &BQ25672::setInput1And2Disconnected},
 };
+static_assert(sizeof(SWITCH_SETTINGS) / sizeof(SWITCH_SETTINGS[0]) == size_t(SwitchType::COUNT),
+              "Switch settings must match SwitchType");
 
 const char *const CHARGE_STATUS[] = {"Not charging", "Trickle charge", "Precharge", "Fast charge (CC)",
                                     "Taper charge (CV)", "Reserved", "Top-off charging", "Charge done"};
